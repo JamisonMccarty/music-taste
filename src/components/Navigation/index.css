@@ -1,0 +1,19 @@
+ul {
+  display: inline;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+li {
+
+  display: inline;
+  margin: 5px 5px 5px 5px;
+  float: right;
+  text-decoration: none;
+}
+
+.navbar {
+  background-color: grey;
+  height: 30px;
+  text-decoration: none;
+}
