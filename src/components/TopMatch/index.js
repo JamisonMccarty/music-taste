@@ -25,15 +25,14 @@ addArtist = (e) =>{
                   <h4 className="bold">{this.props.topartist && this.props.topartist.Name}</h4>
                   <p className="artist-teaser t">{this.props.topartist && this.props.topartist.wTeaser}</p>
                   <iframe title={this.props.topartist.name} width="400" height="202.5" src={this.props.topartist && this.props.topartist.yUrl} frameBorder="0"
-                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe><br/>
                   { auth.uid ?
                   <button className="btn reddish" onClick={this.addArtist}>add to list</button>
                   : null}
             </div>}
         </div>
-)
-}
-
+      )
+    }
 }
 
 const mapDispatchToProps = (dispatch) => {

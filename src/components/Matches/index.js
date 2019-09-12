@@ -2,12 +2,12 @@ import React from 'react';
 import './index.css';
 
 
-
 export default class Match extends React.Component {
 
 moreClick = (e) => {
   this.props.moreClick(this.props.artists[e.target.value])
 }
+
 nextArtists = () => {
   let artists = this.props.artists2;
 }
@@ -33,7 +33,6 @@ nextArtists = () => {
       return (
         <div className="row valign-wrapper">
           <div className="left-align col l8">
-
             <h6>{artist.Name}</h6>
           </div>
           <div className="center col l4 pull-right">
@@ -44,6 +43,5 @@ nextArtists = () => {
       })}
     </div>
   );
-
-}
+ }
 }

@@ -92,7 +92,7 @@ class HomePage extends React.Component {
           </div>
             {auth.uid ?
               <div>
-              <div className="col l6">
+              <div className="col l6 xl6">
                 <TopMatch topartist={this.state.topartist} />
               </div>
                 <div className="col l3">

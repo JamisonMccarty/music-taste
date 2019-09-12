@@ -11,12 +11,12 @@ export default class Landing extends React.Component {
     notlanding: false,
   }
 
-
   emailChange = (e) => {
     this.setState({
       email: e.target.value,
     })
   };
+
   passwordChange = (e) => {
     this.setState({
       password: e.target.value,
@@ -52,47 +52,31 @@ export default class Landing extends React.Component {
 			})
 	};
 
-  // <div className="bars">
-  //     <div className="bar"></div>
-  //     <div className="bar"></div>
-  //     <div className="bar"></div>
-  //     <div className="bar"></div>
-  //     <div className="bar"></div>
-  //     <div className="bar"></div>
-  //     <div className="bar"></div>
-  //     <div className="bar"></div>
-  //     <div className="bar"></div>
-  //     <div className="bar"></div>
-  // </div>
-
 
   render(){
     return(
         <div className="container">
             <div className="row center-align">
-
-
-              <div className="col l12 m12 s12 center">
-                <div className="bars">
-                  <div className="bar"></div>
-                  <div className="bar"></div>
-                  <div className="bar"></div>
-                  <div className="bar"></div>
-                  <div className="bar"></div>
-                  <div className="bar"></div>
-                  <div className="bar"></div>
-                  <div className="bar"></div>
-                  <div className="bar"></div>
-                  <div className="bar"></div>
-                </div>
+                <div className="col l12 m12 s12 center">
+                    <div className="bars">
+                      <div className="bar"></div>
+                      <div className="bar"></div>
+                      <div className="bar"></div>
+                      <div className="bar"></div>
+                      <div className="bar"></div>
+                      <div className="bar"></div>
+                      <div className="bar"></div>
+                      <div className="bar"></div>
+                      <div className="bar"></div>
+                      <div className="bar"></div>
+                    </div>
                 </div>
                 <div className="col l12 m12 s12 center">
                     <h2 className="c">music taste</h2>
                 </div>
-              <div className="col l12 m12 s12 center-align">
-                      <SignUp landingpage={true}/>
-              </div>
-
+                <div className="col l12 m12 s12 center-align">
+                    <SignUp landingpage={true}/>
+                </div>
             </div>
         </div>
     )
