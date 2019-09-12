@@ -16,9 +16,9 @@ const { auth } = props;
 const links = auth.uid ? <SignedInLinks /> : <SignedOutLinks />
 
 return (
-  <nav className="nav-wrapper tan">
+  <nav className="nav-wrapper navtest no-shadows">
     <div className="container">
-      <Link to='/' className="brand-logo">Home</Link>
+      <Link to='/' className="brand-logo">🎵</Link>
 
         {links}
 

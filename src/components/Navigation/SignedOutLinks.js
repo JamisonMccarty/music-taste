@@ -18,17 +18,17 @@ return (
         <NavLink activeClassName="activenavlinks" className="navlinks" to={ROUTES.LANDING}>Landing</NavLink>
       </li>*/}
       <li>
-        <NavLink activeClassName="activenavlinks" className="navlinks" to={ROUTES.HOME}>Search Music</NavLink>
+        <NavLink activeClassName="a activenavlinks" className="n navlinks" to={ROUTES.HOME}>Search Music</NavLink>
       </li>
       <li>
-        <NavLink activeClassName="activenavlinks" className="navlinks" to={ROUTES.ABOUT}>About</NavLink>
+        <NavLink activeClassName="a activenavlinks" className="n navlinks" to={ROUTES.ABOUT}>About</NavLink>
       </li>
       <li>
-        <NavLink activeClassName="activenavlinks" className="navlinks" to={ROUTES.SIGNUP}>Sign Up</NavLink>
+        <NavLink activeClassName="a activenavlinks" className="n navlinks" to={ROUTES.SIGNUP}>Sign Up</NavLink>
       </li>
 
       <li>
-        <NavLink activeClassName="activenavlinks" className="navlinks" to={ROUTES.SIGNIN}>Log In</NavLink>
+        <NavLink activeClassName="a activenavlinks" className="n navlinks" to={ROUTES.SIGNIN}>Log In</NavLink>
       </li>
       {/*<li>
         <NavLink to={ROUTES.MOVIE}>Movies</NavLink>

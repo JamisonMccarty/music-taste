@@ -28,15 +28,19 @@ class HomePage extends React.Component {
   }
 
   handleClick = () => {
-    this.setState({
-      showList: true,
-    })
+    // this.setState({
+    //   showList: true,
+    // })
     console.log(this.state.url);
     fetch(this.state.url)
       .then(response => {
           return response.json();
       })
       .then(data => {
+        if(!data.Similar.Results.length){
+          alert("No results, check spelling and try again!")
+          return
+        }
         console.log(data)
         let topArtist = data.Similar.Results.splice(0, 1);
         let spliced = data.Similar.Results.splice(1, 5);
@@ -48,7 +52,10 @@ class HomePage extends React.Component {
           data: spliced,
           data2: spliced2,
           topartist: topArtist[0],
+          showList: true,
         })
+      }).catch(()=>{
+        alert ('ERROR')
       });
   };
 
@@ -73,38 +80,61 @@ class HomePage extends React.Component {
 
 
   render() {
-    return(
+    const { auth, profile } = this.props;
 
+    return(
         <div className="container">
           <div className="row">
           <div className="col l12">
-          <h2>Music Search</h2>
-          <input name="music" onChange={this.handleChange} placeholder="Search Artist" />
-          <button disabled={this.state.submitDisabled} className="btn waves-effect waves-light" onClick={this.handleClick}>♫  SEARCH</button>
+          <h2  className="c">music search</h2>
+          <input name="input-field" onChange={this.handleChange} placeholder="Search Artist" />
+          <button disabled={this.state.submitDisabled} className="reddish btn waves-effect waves-light" onClick={this.handleClick}>♫  SEARCH</button>
           </div>
+            {auth.uid ?
+              <div>
               <div className="col l6">
                 <TopMatch topartist={this.state.topartist} />
               </div>
                 <div className="col l3">
-
                   <div>
                   {this.state.nextArtists === false ?
                     <Match artists={this.state.data} artists2={this.state.data2} moreClick={this.moreClick}/> :
                     <Match artists={this.state.data2} moreClick={this.moreClick}/>}
                     {this.state.showList === true ?
-                    <div className="pull left">
-                  {this.state.nextArtists === false ?
-                    <button className="btn" onClick={this.nextSet}>▶</button>:
-                    <button className="btn" onClick={this.nextSet}>◀</button>
-                  }
-                  </div> :null}
-                  </div>
+                      <div className="pull center">
+                        {this.state.nextArtists === false ?
+                          <button className="btn reddish" onClick={this.nextSet}>▶</button>:
+                          <button className="btn reddish" onClick={this.nextSet}>◀</button>
+                        }
+                      </div> :null}
+                   </div>
                 </div>
 
 
-                  <div className="center col l3">
+                <div className="center col l3">
                   {this.state.showList === true ? <ArtistList/> : null}
+                </div>
+                </div>
+                :
+                <div>
+                <div className="col l8">
+                  <TopMatch topartist={this.state.topartist} />
+                </div>
+                  <div className="col l4">
+                    <div>
+                    {this.state.nextArtists === false ?
+                      <Match artists={this.state.data} artists2={this.state.data2} moreClick={this.moreClick}/> :
+                      <Match artists={this.state.data2} moreClick={this.moreClick}/>}
+                      {this.state.showList === true ?
+                        <div className="pull center">
+                          {this.state.nextArtists === false ?
+                            <button className="btn reddish" onClick={this.nextSet}>▶</button>:
+                            <button className="btn reddish" onClick={this.nextSet}>◀</button>
+                          }
+                        </div> :null}
+                     </div>
                   </div>
+                  </div>}
 
           </div>
         </div>
@@ -115,9 +145,18 @@ class HomePage extends React.Component {
 
 }
 
+const mapStateToProps = (state) => {
+  console.log(state);
+  return {
+    auth: state.firebase.auth,
+    profile: state.firebase.profile,
+  }
+}
 
 
-export default HomePage;
+export default  connect(mapStateToProps)(HomePage)
+
+
 
 // const mapDispatchToProps = (dispatch) => {
 //   return {

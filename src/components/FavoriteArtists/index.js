@@ -18,9 +18,9 @@ class FavoriteArtists extends React.Component {
         <div className="container">
             <ArtistList />
           <div className="row">
-            <div className="col l12">
-              <CreateArtist />
-            </div>
+          <div className="col l12">
+            <CreateArtist />
+          </div>
           </div>
         </div>
       </div>

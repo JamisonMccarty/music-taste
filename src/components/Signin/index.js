@@ -27,8 +27,8 @@ render(){
 
       <div className="container">
 
-        <form onSubmit={this.handleSubmit} className="white">
-          <h5>Sign In</h5>
+        <form onSubmit={this.handleSubmit} className="offwhite">
+          <h2  className="c">sign in</h2>
           <div className="input-field">
             <label htmlFor="email">Email</label>
             <input type="email" id="email" onChange={this.handleChange}/>
@@ -38,7 +38,7 @@ render(){
             <input type="password" id="password" onChange={this.handleChange}/>
           </div>
           <div className="input-field">
-            <button className="btn normal tan lighten-1 z-depth-0">Login</button>
+            <button className="btn normal reddish lighten-1 z-depth-0">Login</button>
           </div>
           <div className="red-text center">
             { authError ? <p>{authError}</p> :  null}

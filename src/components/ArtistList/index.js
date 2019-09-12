@@ -12,11 +12,11 @@ class ArtistList extends Component{
     const { artists, profile } = this.props;
     return(
       <div>
-          <h3>Favorite Artists</h3>
-          <ul>{profile.topArtists && profile.topArtists.map((artist)=>{
+          <h2 className="c">favorite artists</h2>
+          <ul className="collection">{profile.topArtists && profile.topArtists.map((artist)=>{
             return (
               <div  className="testdiv l6">
-                <li className="test">{artist}</li>
+                <li className="collection-item">{artist}</li>
               </div>
                   )
                 })}

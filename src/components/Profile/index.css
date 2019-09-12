@@ -1,9 +1,83 @@
-/* @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Copse&display=swap');
 
 body {
-  font-family: 'Raleway', sans-serif;
+  background-color: #f6f5f3;
+  color: #3a4660
 }
 
+button:hover{
+  background-color: #d8a392!important;
+}
+button:focus{
+  background-color: #bd8c7d!important;
+}
+
+.artist-teaser {
+  height: 300px;
+  overflow-y: auto;
+
+}
+.bold {
+  font-weight: 600;
+}
+
+.t {
+  font-weight: 500;
+}
+
+.blurb {
+  width: 800px;
+  margin: 0 auto 0 auto;
+  font-size: 18px;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px #f6f5f3 inset !important;
+}
+
+input:focus {
+     border-bottom: 1px solid #3a4660!important;
+     box-shadow: 0 1px 0 0 #3a4660!important;
+   }
+
+/* input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus{
+  -webkit-fill-color: red!important;
+} */
+
+.c {
+  font-family: 'Copse', serif;
+  /* color: #3d3d3f; */
+  /* color: #acb7ae; light green neutral */
+  /* color: #82716e;  brownish */
+  color: #3a4660; /* navy blue */
+}
+.reddish-text {
+  color: #bd8c7d;
+  /* font-style: italic; */
+  font-weight: 600;
+}
+
+.reddish {
+  background-color: #bd8c7d;
+}
+
+.down {
+  margin-top: 40px;
+}
+
+/*
 .center {
   align-content: center;
   width: 1000px;
@@ -104,8 +178,8 @@ input {
   display: flex;
 } */
 .profile {
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
 }
 .home-container {
   display: flex;
@@ -114,7 +188,7 @@ input {
 
  .tan {
   font-family: 'Raleway', sans-serif;
-  /* background-color: #DCD0C0; */
+  background-color: #fff;
   color: #373737;
 }
 

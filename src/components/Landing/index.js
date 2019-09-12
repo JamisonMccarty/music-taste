@@ -3,10 +3,12 @@ import SignUp from '../Signup';
 import './index.css';
 // import firebase from 'firebase';
 
+
 export default class Landing extends React.Component {
   state={
     signedIn: false,
     accountCreated: false,
+    notlanding: false,
   }
 
 
@@ -67,11 +69,28 @@ export default class Landing extends React.Component {
   render(){
     return(
         <div className="container">
-            <div className="row right-align">
+            <div className="row center-align">
 
-              <div className="col l6 center-align">
-                    <h2>Landing</h2>
-                      <SignUp />
+
+              <div className="col l12 m12 s12 center">
+                <div className="bars">
+                  <div className="bar"></div>
+                  <div className="bar"></div>
+                  <div className="bar"></div>
+                  <div className="bar"></div>
+                  <div className="bar"></div>
+                  <div className="bar"></div>
+                  <div className="bar"></div>
+                  <div className="bar"></div>
+                  <div className="bar"></div>
+                  <div className="bar"></div>
+                </div>
+                </div>
+                <div className="col l12 m12 s12 center">
+                    <h2 className="c">music taste</h2>
+                </div>
+              <div className="col l12 m12 s12 center-align">
+                      <SignUp landingpage={true}/>
               </div>
 
             </div>

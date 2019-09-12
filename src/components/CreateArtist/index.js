@@ -34,7 +34,7 @@ render(){
           <input type="text" id="artist" onChange={this.handleChange}/>
         </div>
         <div>
-          <button className="btn waves-effect waves-light">Add Artist</button>
+          <button className="btn reddish waves-effect waves-light">Add Artist</button>
         </div>
       </form>
     </div>

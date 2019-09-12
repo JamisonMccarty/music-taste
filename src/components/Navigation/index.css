@@ -1,4 +1,4 @@
-ul {
+/* ul {
   display: inline;
   font-size: 20px;
   text-decoration: none;
@@ -10,10 +10,44 @@ li {
   margin: auto 5px 5px 5px;
 
   text-decoration: none;
+} */
+.no-shadows {
+    box-shadow: none!important;
+}
+
+/* .a-red {
+  color: red!important;
+}
+
+.a-yellow {
+  color: yellow!important;
+}
+
+.a-green {
+  color: green!important;
+}
+
+.a-blue{
+  color: blue!important;
+} */
+
+.a {
+  font-weight: 600;
+  color: #bd8c7d!important;
+}
+
+.n {
+  font-weight: 600!important;
+  
+}
+
+.navtest{
+  background-color: #f6f5f3;
+  color: #d4d4dc;
 }
 
 .navbar {
-  background-color: white;
+  background-color: #f6f5f3;
   height: 40px;
   text-decoration: none;
 }
