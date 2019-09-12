@@ -1,3 +1,132 @@
+/* @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
 .center {
   align-content: center;
+  width: 1000px;
+  display: inline-block;
+  height: 1000px;
 }
+
+.parent {
+  text-align: center;
+}
+
+.artists {
+  display: flex;
+  align-items: center;
+}
+
+.teaser { */
+  /* background-color: #B8B8B8; */
+  /* border: 1px black;
+  border-radius: 10px;
+
+  font-size: 12px;
+  padding: 20px;
+  box-shadow: 2px 4px rgba(0, 0, 0, 0.18);
+}
+
+
+
+.list-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 500px;
+}
+
+
+.artist-name button {
+  font-size: 25px;
+}
+.search{
+  width: 100px;
+}
+
+.createAccountButton {
+  width: 150px;
+}
+button {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+
+  background-color: #DCD0C0;
+  color: #373737;
+  border: #DCD0C0;
+  height: 30px;
+  width: 30px;
+  font-size: 16px;
+
+}
+.matchButton {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  background-color: #DCD0C0;
+  color: #373737;
+  border: #DCD0C0;
+  height: 30px;
+  width: 30px;
+  font-size: 20px;
+
+}
+
+
+.tan {
+  font-family: 'Raleway', sans-serif;
+  background-color: #DCD0C0;
+  color: #373737;
+}
+
+.normal {
+  width: 100px
+}
+
+.save {
+  background-color: green;
+  color: white;
+}
+
+
+
+input {
+  font-family: 'Raleway', sans-serif;
+  height: 30px;
+  width: 250px;
+  margin: 10px;
+  padding-left: 10px;
+  font-size: 14px;
+}
+
+.landingContainer {
+  display: flex;
+} */
+
+ .tan {
+  font-family: 'Raleway', sans-serif;
+  background-color: #DCD0C0;
+  color: #373737;
+}
+
+.navlinks {
+  font-family: 'Raleway', sans-serif;
+  color: #373737;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.activenavlinks {
+  color: red;
+}
+/* .testdiv{
+  border: 1px solid black;
+  width: 200px;
+  height: 50px;
+}
+
+.test {
+  color: red;
+  background-color: pink;
+} */

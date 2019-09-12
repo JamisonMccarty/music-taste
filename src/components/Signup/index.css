@@ -1,0 +1,18 @@
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+.center {
+  align-content: center;
+  width: 1000px;
+  display: inline-block;
+}
+
+.parent {
+  text-align: center;
+}
+
+.artists {
+  display: flex;
+  align-items: center;
+}

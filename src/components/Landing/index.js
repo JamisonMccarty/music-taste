@@ -1,10 +1,82 @@
 import React from 'react';
+import SignUp from '../Signup';
+import './index.css';
+// import firebase from 'firebase';
+
+export default class Landing extends React.Component {
+  state={
+    signedIn: false,
+    accountCreated: false,
+  }
 
 
-const LandingPage = () => (
-  <div>
-    <h1>Taste Dive</h1>
-  </div>
-);
+  emailChange = (e) => {
+    this.setState({
+      email: e.target.value,
+    })
+  };
+  passwordChange = (e) => {
+    this.setState({
+      password: e.target.value,
+    })
+  };
 
-export default LandingPage;
+  createAccount = (e) => {
+    e.preventDefault();
+    this.props.firebase
+      .auth()
+      .createUserWithEmailAndPassword(this.state.email, this.state.password)
+  //must be an arrow function so we have access to state of the component
+      .then((user)=>{
+        this.setState({
+          accountCreated: true,
+        });
+      }).catch(function(error){
+        var errorCode = error.code;
+        var errorMessage = error.message;
+      })
+  };
+
+  login = (e) =>{
+    e.preventDefault();
+		this.props.firebase
+			.auth()
+			.signInWithEmailAndPassword(this.state.email, this.state.password)
+			.then((data)=>{
+				this.setState({
+					signedIn: true,
+					user: data.user,
+				})
+			})
+	};
+
+  // <div className="bars">
+  //     <div className="bar"></div>
+  //     <div className="bar"></div>
+  //     <div className="bar"></div>
+  //     <div className="bar"></div>
+  //     <div className="bar"></div>
+  //     <div className="bar"></div>
+  //     <div className="bar"></div>
+  //     <div className="bar"></div>
+  //     <div className="bar"></div>
+  //     <div className="bar"></div>
+  // </div>
+
+
+  render(){
+    return(
+        <div className="container">
+            <div className="row right-align">
+
+              <div className="col l6 center-align">
+                    <h2>Landing</h2>
+                      <SignUp />
+              </div>
+
+            </div>
+        </div>
+    )
+  }
+
+};

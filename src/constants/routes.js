@@ -1,3 +1,11 @@
 export const LANDING = '/';
 export const HOME = '/home';
 export const ABOUT = '/about';
+export const EVENT = '/event';
+export const MOVIE = '/movies';
+export const SIGNIN = '/sign-in';
+export const SIGNUP = '/sign-up';
+export const FAVORITEARTISTS = '/favorite-artists';
+export const FAVORITEMOVIES = '/favorite-movies';
+export const PROFILE = '/user-profile';
+export const TESTPAGE = '/testpage';
