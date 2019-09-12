@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import './index.css';
 import SignedInLinks from './SignedInLinks';
 import SignedOutLinks from './SignedOutLinks';
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
+import {FaMusic} from 'react-icons/fa';
 
 // import * as ROUTES from '../../constants/routes';
 
@@ -11,14 +12,13 @@ const Navigation = (props) => {
 
 const { auth } = props;
 
-//implement something like this for the landing page
-
+//check to see if auth.uid exists
 const links = auth.uid ? <SignedInLinks /> : <SignedOutLinks />
 
 return (
   <nav className="nav-wrapper navtest no-shadows">
     <div className="container">
-      <Link to='/' className="brand-logo">🎵</Link>
+      <Link to='/' className="brand-logo"><FaMusic size={30}/></Link>
 
         {links}
 

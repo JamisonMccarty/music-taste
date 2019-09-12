@@ -16,8 +16,12 @@ button:focus{
 .artist-teaser {
   height: 300px;
   overflow-y: auto;
-
 }
+
+.brand-logo {
+  color: #bd8c7d!important;
+}
+
 .bold {
   font-weight: 600;
 }
