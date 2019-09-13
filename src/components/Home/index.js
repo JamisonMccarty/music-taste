@@ -28,9 +28,7 @@ class HomePage extends React.Component {
   }
 
   handleClick = () => {
-    // this.setState({
-    //   showList: true,
-    // })
+  
     console.log(this.state.url);
     fetch(this.state.url)
       .then(response => {

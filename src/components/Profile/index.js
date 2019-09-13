@@ -2,9 +2,7 @@ import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import ArtistList from '../ArtistList';
 import { Redirect } from 'react-router-dom';
-import './index.css'
-
-
+import './index.css';
 
 class Profile extends Component {
 
@@ -23,7 +21,6 @@ render(){
       <div className="col l4">
         <img className="profile down" src="https://www.flynz.co.nz/wp-content/uploads/profile-placeholder.png"/>
         <h6><span className="bold">NAME:</span> {profile.firstName} {profile.lastName}</h6>
-
       </div>
       </div>
     </div>

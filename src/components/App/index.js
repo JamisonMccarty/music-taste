@@ -29,22 +29,6 @@ export default class App extends React.Component{
     firebase: '',
   }
 
-  // componentDidMount() {
-  //   const firebaseApp = firebase.initializeApp({
-  //     apiKey: "AIzaSyDV5Yu4-tZwNHoR37Q1ItsDATchpYd5nG0",
-  //     authDomain: "music-taste-app.firebaseapp.com",
-  //     databaseURL: "https://music-taste-app.firebaseio.com",
-  //     projectId: "music-taste-app",
-  //     storageBucket: "",
-  //     messagingSenderId: "916980291168",
-  //     appId: "1:916980291168:web:2c2e0eb6a5a2f13baa9505"
-  //   });
-  //   this.setState({
-  //     firebase: firebaseApp,
-  //   });
-	// };
-
-
 
 render(){
   return(

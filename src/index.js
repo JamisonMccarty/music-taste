@@ -11,7 +11,14 @@ import { reduxFirestore, getFirestore } from 'redux-firestore';
 import { reactReduxFirebase, getFirebase } from 'react-redux-firebase';
 import fbConfig from './components/Firebase/fbConfig';
 
-// , applyMiddleware(thunk.withExtraArgument({getFirebase, getFirestore}))
+//compose allows us to apply several store enhancers
+// to add extra functionality to our Redux store
+// applyMiddleware
+// reduxFirestore
+// reactReduxFirebase adds firebase and firebaseAuth to the store
+
+
+//thunk allows us to interact with the store asynchronously
 
 const store = createStore(rootReducer,
     compose(
@@ -23,6 +30,8 @@ const store = createStore(rootReducer,
 
 //dont render to the DOM until firebase Auth is ready
 //this prevents flashing of the Signed Out Links
+
+//provider makes the store available to any component that is wrapped in connect
 store.firebaseAuthIsReady.then(()=>{
   ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('root'));
   serviceWorker.unregister();

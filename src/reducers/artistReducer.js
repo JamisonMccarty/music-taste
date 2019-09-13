@@ -1,8 +1,8 @@
 const initState = {
     artist: [
-      {id: '1', artist: 'Illenium'},
-      {id: '2', artist: 'Elohim'},
-      {id: '3', artist: 'Rezz'}
+      {id: '1', artist: 'Test1'},
+      {id: '2', artist: 'Test2'},
+      {id: '3', artist: 'Test3'}
     ]
 };
 

@@ -19,11 +19,8 @@ return (
   <nav className="nav-wrapper navtest no-shadows">
     <div className="container">
       <Link to='/' className="brand-logo"><FaMusic size={30}/></Link>
-
         {links}
-
     </div>
-
   </nav>
 
 );

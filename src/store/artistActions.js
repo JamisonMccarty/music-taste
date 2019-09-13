@@ -50,37 +50,3 @@ export const addArtist = (artist) => {
 
   }
 };
-
-// export const addArtist = (artist) => {
-//   return (dispatch, getState, {getFirebase, getFirestore}) => {
-//
-//     const firestore = getFirestore();
-//     const profile = getState().firebase.profile;
-//     const userId = getState().auth.uid;
-//     const existingArtists = getState().firebase.profile.topArtists;
-
-    // firestore.collection('users').add({
-    //   ...artist,
-    //   topArtists:
-//     profile.add({
-//       topArists: [...existingArtists, artist],
-//
-//     }).then(()=>{
-//       dispatch({type: 'ADD_ARTIST', artist});
-//     }).catch((err)=>{
-//       dispatch({type: 'ADD_ARTIST_ERROR', err})
-//     })
-//   }
-// }
-
-// export const createArtist = (artist) => {
-//   return (dispatch, getState) => {
-//     // make async call to database
-//
-//       dispatch({
-//         type: 'CREATE_ARTIST',
-//         artist: artist,
-//       })
-//
-//   }
-// };
