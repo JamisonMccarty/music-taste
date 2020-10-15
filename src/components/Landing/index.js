@@ -58,6 +58,7 @@ export default class Landing extends React.Component {
         <div className="container">
             <div className="row center-align">
                 <div className="col l12 m12 s12 center">
+                    {/*credit to Jack Rugile on codepen for soundbar animation */}
                     <div className="bars">
                       <div className="bar"></div>
                       <div className="bar"></div>
